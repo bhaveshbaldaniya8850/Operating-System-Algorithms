@@ -1,9 +1,6 @@
 le = int(input("How many process you have :"))
-p_at = [0]*le
+p_at,p_bt,p_wt,tt = [0]*le,[0]*le,[0]*le,[0]*le
 p_name = ["None"]*le
-p_bt = [0]*le
-p_wt=[0]*le
-tt = [0]*le
 sub_awt = 0 
 sub_att = 0
 
@@ -47,8 +44,7 @@ for i in range (0, le):
                 p_name[j] = temp
                
 
-g_s = [0]*le
-g_e = [0]*le
+g_s,g_e = [0]*le,[0]*le
 temp = 0
 for i in range (0,le):
     if p_at[i]<=0:
@@ -63,8 +59,6 @@ for i in range (0,le):
 
 for i in range (0,le):
     g_e[i] = g_s[i] + p_bt[i]
-# print(g_s)
-# print(g_e)
 
 for i in range (le):
     p_wt[i] = g_s[i] - p_at[i]
@@ -76,12 +70,6 @@ for i in range (le):
     sub_att += tt[i]
 awt = sub_awt/le
 att = sub_att/le
-
-# print("Burst Time : ",p_bt)
-# print("Waiting Time : ",p_wt)
-# print("Turn around Time : ",tt)
-# print ("Average Waiting Time : ",awt)
-# print("Average Turn around Time : ",att)
 
 print("process Name \t Arrival Time \t Burst Time \t Waiting Time \t Turnaround Time")
 for i in range (le):
