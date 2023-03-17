@@ -45,15 +45,9 @@ for i in range (0,le):
 for i in range (0,le):
     g_e[i] = g_s[i] + p_bt[i]
 
-print(g_s)
-print(g_e)
-
 for i in range (le):
     p_wt[i] = g_s[i] - p_at[i]
     tt[i] = p_wt[i] + p_bt[i]
-
-print(p_wt)
-print(tt)
 
 for i in range (le):
     sub_ap_wt += p_wt[i] 
@@ -61,8 +55,6 @@ for i in range (le):
 ap_wt = sub_ap_wt/le
 att = sub_att/le
 
-print()
-print()
 print("process Name \t Arrival Time \t Burst Time \t Waiting Time \t Turnaround Time")
 for i in range (le):
     print(p_name[i],"\t\t",p_at[i],"\t\t",p_bt[i],"\t\t",p_wt[i],"\t\t",tt[i])
