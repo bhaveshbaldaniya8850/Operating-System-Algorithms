@@ -4,7 +4,7 @@ def findWaitingTime(processes, n, wt):
         rt[i] = processes[i][1]
     complete = 0
     t = 0
-    minm = 999999999
+    minm = rt[0]
     short = 0
     check = False
     while (complete != n):
